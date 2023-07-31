@@ -45,44 +45,42 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Quadrant(modifier: Modifier = Modifier) {
     Column(
-        modifier = modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Row(
-            modifier = modifier
-                .background(Color.Red)
+            modifier = Modifier
                 .weight(1F)
         ) {
             ComposableInfo(
                 infoTitle = stringResource(R.string.info_title_text),
                 infoParagraph = stringResource(R.string.info_paragraph_text),
                 backgroundColor = colorResource(R.color.top_left),
-                modifier = modifier.weight(1F)
+                modifier = Modifier.weight(1F)
             )
             ComposableInfo(
                 infoTitle = stringResource(R.string.info_title_image),
                 infoParagraph = stringResource(R.string.info_paragraph_image),
                 backgroundColor = colorResource(R.color.top_right),
-                modifier = modifier.weight(1F)
+                modifier = Modifier.weight(1F)
             )
         }
         Row(
-            modifier = modifier
-                .background(Color.Green)
+            modifier = Modifier
                 .weight(1F)
         ) {
             ComposableInfo(
                 infoTitle = stringResource(R.string.info_title_row),
                 infoParagraph = stringResource(R.string.info_paragraph_row),
                 backgroundColor = colorResource(R.color.bottom_left),
-                modifier = modifier.weight(1F)
+                modifier = Modifier.weight(1F)
             )
             ComposableInfo(
                 infoTitle = stringResource(R.string.info_title_column),
                 infoParagraph = stringResource(R.string.info_paragraph_column),
                 backgroundColor = colorResource(R.color.bottom_right),
-                modifier = modifier.weight(1F)
+                modifier = Modifier.weight(1F)
             )
         }
     }
@@ -105,11 +103,10 @@ fun ComposableInfo(
     ) {
         Text(
             fontWeight = FontWeight.Bold,
-            modifier = modifier.padding(bottom = 16.dp),
+            modifier = Modifier.padding(bottom = 16.dp),
             text = infoTitle
         )
         Text(
-            modifier = modifier,
             text = infoParagraph,
             textAlign = TextAlign.Justify
         )
